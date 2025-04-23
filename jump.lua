@@ -28,7 +28,7 @@ function jumptagCommand(bp) -- bp BufPane
 			micro.InfoBar():Message(msg)
 			return
 		end
-		local linenum = tonumber(out)-1
-		bp.Cursor.Y = linenum
+		local linenum = tonumber(out)
+		bp.Cursor.Y = linenum - 1
 		micro.InfoBar():Message(string.format("Jumped to line %i", linenum))
 end
